@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OTP Input Directive</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+  <script>
+    'use strict';
+     var app = angular.module('exampleApp', []);
+      app.controller('appCtrl',function($scope) {
+        $scope.otpInput={
+            size:6,
+            type:"text",
+            onDone: function(value){
+                console.log(value);
+            },
+            onChange: function(value){
+                console.log(value);
+            }
+        }
+      });
+  </script>
+ </head>
+ <body ng-app="exampleApp" ng-controller="appCtrl">
+  <div style="width:40%;margin:0 auto;padding-top:150px">
+    <div otp-input-directive options="otpInput"></div>
+    <div style="margin-top:20px">
+      {{otpInput.value}}
+    </div>
+  </div>
+ <body>
+ </html>
