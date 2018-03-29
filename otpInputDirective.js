@@ -33,6 +33,7 @@ angular.module("otpInputDirective", [])
                 "padding": "5px 0px",
                 "outline":"none",
                 "box-shadow":"none",
+                "background":"transparent",
                 "border-color": $scope.options.style && $scope.options.style.lineColor ? $scope.options.style.lineColor : DEFAULT_COLOR,
                 "color": $scope.options.style && $scope.options.style.color ? $scope.options.style.color : DEFAULT_COLOR,
                 "font-size": $scope.options.style && $scope.options.style.fontSize ? scope.options.style.fontSize : "20px"

@@ -2,6 +2,15 @@
 <html>
 <head>
   <title>OTP Input Directive</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <style>
+      body{
+          font-family: 'Roboto', sans-serif;
+      }
+      .otpBox{
+          width:250px;margin:0 auto;margin-top: 150px;padding: 20px;background: #f5f5f5;border: 1px solid #d4d4d4;height: 150px;
+      }
+  </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
   <script src="otpInputDirective.min.js"></script>
   <script>
@@ -22,7 +31,8 @@
   </script>
  </head>
  <body ng-app="exampleApp" ng-controller="appCtrl">
-  <div style="width:250px;margin:0 auto;padding-top:150px">
+  <div class="otpBox">
+    <h4 style="text-align: center">Enter One Time Password</h4>
     <div otp-input-directive options="otpInput"></div>
     <div style="margin-top:20px;text-align: center">
       Output: {{otpInput.value}}
