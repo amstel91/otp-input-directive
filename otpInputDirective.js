@@ -1,3 +1,8 @@
+/*
+ * author: Amstel D'Almeida
+ * email: amstel91@gmail.com
+ * https://github.com/amstel91/otp-input-directive
+ */
 app.directive('otpInputDirective', ['$timeout', function($timeout) {
     return {
         restrict: 'A', // restrict by attribute
