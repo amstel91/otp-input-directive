@@ -3,7 +3,8 @@
  * email: amstel91@gmail.com
  * https://github.com/amstel91/otp-input-directive
  */
-app.directive('otpInputDirective', ['$timeout', function($timeout) {
+angular.module("otpInputDirective", [])
+.directive('otpInputDirective', ['$timeout', function($timeout) {
     return {
         restrict: 'A', // restrict by attribute
         scope: {
@@ -30,6 +31,8 @@ app.directive('otpInputDirective', ['$timeout', function($timeout) {
                 "width": width + "%",
                 "text-align": "center",
                 "padding": "5px 0px",
+                "outline":"none",
+                "box-shadow":"none",
                 "border-color": $scope.options.style && $scope.options.style.lineColor ? $scope.options.style.lineColor : DEFAULT_COLOR,
                 "color": $scope.options.style && $scope.options.style.color ? $scope.options.style.color : DEFAULT_COLOR,
                 "font-size": $scope.options.style && $scope.options.style.fontSize ? scope.options.style.fontSize : "20px"
@@ -89,7 +92,7 @@ app.directive('otpInputDirective', ['$timeout', function($timeout) {
 
             $timeout(function() {
                 for (var i = 0; i < size; i++) {
-                    elementArr.push(angular.element("#otpInput" + randomNumber + "-" + i));
+                    elementArr.push(angular.element(document.querySelector("#otpInput" + randomNumber + "-" + i)));
                 }
             });
 

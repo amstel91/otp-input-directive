@@ -6,7 +6,7 @@
   <script src="otpInputDirective.min.js"></script>
   <script>
     'use strict';
-     var app = angular.module('exampleApp', []);
+     var app = angular.module('exampleApp', ["otpInputDirective"]);
       app.controller('appCtrl',function($scope) {
         $scope.otpInput={
             size:6,
@@ -22,10 +22,10 @@
   </script>
  </head>
  <body ng-app="exampleApp" ng-controller="appCtrl">
-  <div style="width:40%;margin:0 auto;padding-top:150px">
+  <div style="width:250px;margin:0 auto;padding-top:150px">
     <div otp-input-directive options="otpInput"></div>
-    <div style="margin-top:20px">
-      {{otpInput.value}}
+    <div style="margin-top:20px;text-align: center">
+      Output: {{otpInput.value}}
     </div>
   </div>
  <body>
