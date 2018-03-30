@@ -1,5 +1,6 @@
 # otpInputDirective
 An Input Form Element to enter OTP Number, PIN or split single characters.
+![Alt Text](https://github.com/amstel91/otp-input-directive/blob/master/demo.gif)
 
 ### Usage
 Add angular and otpInputDirective to your code
