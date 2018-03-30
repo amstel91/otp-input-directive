@@ -8,3 +8,28 @@ Add angular and otpInputDirective to your code
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
 <script src="otpInputDirective.min.js"></script>
 ```
+
+- Add a dependency to the `otpInputDirective` module in your application.
+
+```js
+angular.module('app', ['otpInputDirective']);
+```
+
+### In your HTML:
+```html
+<div otp-input-directive options="otpInput"></div>
+```
+
+### In your Angular Controller:
+```js
+$scope.otpInput={
+            size:6,
+            type:"text",
+            onDone: function(value){
+                console.log(value);
+            },
+            onChange: function(value){
+                console.log(value);
+            }
+        };
+```
