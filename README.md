@@ -33,6 +33,7 @@ $scope.otpInput={
             },
             onChange: function(value){
                 console.log(value);
-            }
+            },
+            reset: function(){}
         };
 ```
