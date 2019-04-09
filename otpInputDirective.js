@@ -41,7 +41,15 @@ angular.module("otpInputDirective", [])
 
             $scope.type = $scope.options.type ? $scope.options.type : "text";
             $scope.placeholder = $scope.options.placeholder && $scope.options.placeholder.length === 1 ? $scope.options.placeholder : "";
-
+            
+            $scope.options.reset = function(){
+              for(var i = 0; i < $scope.characters.length;i++){
+                var id = 'otpInput'+$scope.characters[i].index;
+                document.getElementById(id).value = '';
+              }
+              $scope.options.value = '';
+            }
+            
             $scope.setOtpValue = function() {
                 $scope.options.value = "";
                 var done = true;
