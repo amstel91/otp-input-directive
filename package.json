@@ -1,0 +1,19 @@
+{
+  "name": "otp-input-directive",
+  "version": "1.0.0",
+  "description": "An Input Form Element to enter OTP Number, PIN or split single characters.",
+  "main": "otpInputDirective.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amstel91/otp-input-directive.git"
+  },
+  "author": "Amstel D'Almeida",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amstel91/otp-input-directive/issues"
+  },
+  "homepage": "https://github.com/amstel91/otp-input-directive#readme"
+}
